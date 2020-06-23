@@ -1,0 +1,127 @@
+*{
+font-family: 'Balsamiq Sans', cursive;
+}
+
+body{
+  margin:0;
+  background-color: black;
+}
+
+h1{
+  margin:0;
+  color:white;
+  font-size: 32px;
+}
+
+.opening{
+  text-align: center;
+}
+
+.fullForm{
+  display:flex;
+  width:100%;
+  flex-flow:column;
+  align-items:center;
+}
+/*
+.items{
+  display: flex;
+  flex-flow: row;
+  align-items:center;
+  height:30px;
+  width:100%;
+  justify-content: center;
+} */
+
+.items{
+  display:flex;
+  flex-flow:row;
+  align-items: center;
+  margin:3px;
+  height:25px;
+}
+
+.userInputs{
+  display: flex;
+  flex-direction: row;
+}
+
+input:checked + p{
+  text-decoration: line-through;
+  text-decoration-color: white;
+}
+
+#container{
+  position: relative;
+  top:40px;
+}
+
+#copyright{
+
+  text-align: center;
+  margin-top: 35px;
+}
+
+#prompt{
+  font-size: 23px;
+  margin:2px;
+}
+
+p{
+  color: white;
+  font-size: 19px;
+}
+
+input:focus{
+  outline:none;
+}
+
+button{
+  border-radius: 50%;
+  width:25px;
+  height:25px;
+  background-color: white;
+  color:#007892;
+  border:none;
+
+}
+
+button:hover{
+  background-color:yellow;
+  width:35px;
+  height:35px;
+}
+
+.add{
+  font-size:18px;
+}
+
+.remove{
+  font-size:12px;
+}
+
+input[type = 'text']{
+  background-color: black;
+  border:none;
+  border-bottom: 2px solid white;
+  color:white;
+}
+
+input[type = 'checkbox']:hover{
+width:15px;
+height:15px;
+}
+
+form{
+  position:relative;
+  left:2%;
+}
+
+.all{
+  display: flex;
+  flex-flow:column;
+  align-items: flex-start;
+  position:relative;
+  left:0;
+
+}

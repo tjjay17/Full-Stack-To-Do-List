@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "styles.css">
+  </head>
+  <body>
+
+   <div id = "container">
+
+    <div class = "opening">
+     <h1><%=dayKind%></h1>
+     <p id = "prompt">Enter your daily <%=listName%> tasks!</p>
+    </div>
+
+<div class = "fullForm">
+  <div class = "all">
+  <%taskdata.forEach(function(item){%>
+    <form action = "/delete" method = "post">
+    <div class = 'items'>
+      <input name = "checkBox" class = "checker" type = "checkbox" value = "<%=item._id %>" onChange="this.form.submit()">
+      <p class = "task"><%=item.name%></p>
+    </div>
+    <input type = "hidden" name = "nameList" value = "<%=listName%>"></input> 
+  </form>
+  <%})%>
+</div>
+
+
+  <div class = "userInputs">
+      <form  action = "/" method = "POST">
+        <input class = "taskIn" type = "text" name = "newtask" placeholder = "Enter a task" autocomplete="off">
+        <button class = 'add' type = "Submit" name = 'add' value = "<%=listName%>">+</button>
+      </form>
+  </div>
+
+    <p id = 'copyright'>&copy Thanooj Jeyanandan</p>
+
+
+</div>
+</div>
+
+<script src = 'staticjs.js'></script>
+
+  </body>
+</html>
